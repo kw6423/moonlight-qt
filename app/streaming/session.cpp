@@ -1366,6 +1366,7 @@ void Session::getWindowDimensions(int& x, int& y,
     SDL_Rect usableBounds;
     if (SDL_GetDisplayUsableBounds(displayIndex, &usableBounds) == 0) {
         // If the stream resolution fits within the usable display area, use it directly
+        // Trigger build
         if (m_StreamConfig.width < usableBounds.w &&
             m_StreamConfig.height < usableBounds.h) {
             width = m_StreamConfig.width;
